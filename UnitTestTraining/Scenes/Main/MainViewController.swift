@@ -40,7 +40,7 @@ final class MainViewController: UIViewController, Bindable {
         title = "Exercise List"
         
         tableView.do {
-            $0.delegate = self
+//            $0.delegate = self
             $0.rowHeight = 68
             $0.register(cellType: ExerciseCell.self)
         }
@@ -70,11 +70,11 @@ final class MainViewController: UIViewController, Bindable {
 }
 
 // MARK: - UITableViewDelegate
-extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
+//extension MainViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+//}
 
 // MARK: - StoryboardSceneBased
 extension MainViewController: StoryboardSceneBased {
