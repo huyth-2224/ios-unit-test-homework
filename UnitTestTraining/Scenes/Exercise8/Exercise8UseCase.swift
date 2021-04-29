@@ -13,5 +13,5 @@ protocol Exercise8UseCaseType {
 }
 
 struct Exercise8UseCase: Exercise8UseCaseType, CalculateBadmintonFee {
-
+    
 }

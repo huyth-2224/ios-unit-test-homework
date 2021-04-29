@@ -44,4 +44,14 @@ extension Date {
         
         self = date
     }
+    
+    static func createDateWith(dayInWeek: DayInWeek) -> Date {
+        let currentTime = Date().timeIntervalSince1970
+        let allDayInWeeks = (0...7).map { Date(timeIntervalSince1970: Double($0) * 24 * 3_600 + currentTime) }
+        
+        for date in allDayInWeeks where date.dayInWeek() == dayInWeek {
+            return date
+        }
+        return Date()
+    }
 }
